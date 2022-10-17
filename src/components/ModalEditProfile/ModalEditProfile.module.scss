@@ -1,0 +1,244 @@
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+
+.spinner {
+    height: 14px;
+    width: 14px;
+    background-color: transparent;
+    border: 2px solid rgba(22, 24, 35, 0.5);
+    border-radius: 50%;
+    border-right: 1px solid transparent;
+    animation: spinner 0.55s linear infinite;
+    position: absolute;
+    top: 12px;
+    right: 188px;
+}
+
+.tick_icon {
+    position: absolute;
+    top: 9px;
+    right: 188px;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    width: 700px;
+    height: 700px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+.header {
+    padding: 24px 24px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.8rem;
+    font-weight: 600;
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.2);
+
+    .close_btn {
+        width: 42px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.body {
+    padding: 8px 24px 0;
+
+    // Phần chung
+    .title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        display: block;
+        width: 120px;
+    }
+
+    .error_message {
+        display: block;
+        color: rgb(255, 76, 58);
+        font-size: 1.3rem;
+        margin-top: 5px;
+    }
+
+    .body_item {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+
+        .wrapper {
+            width: 360px;
+
+            .input_text {
+                width: 360px;
+                height: 38px;
+                border-radius: 4px;
+                background: rgba(22, 24, 35, 0.06);
+                caret-color: var(--primary-color);
+                font-size: 16px;
+                color: rgb(22, 24, 35);
+                line-height: 24px;
+                outline: none;
+                border: none;
+                padding: 7px 12px;
+            }
+
+            .sub_title {
+                font-size: 1.3rem;
+                display: block;
+                margin-top: 6px;
+            }
+        }
+    }
+
+    // Từng phần
+
+    .edit_avatar {
+        display: flex;
+        width: 374px;
+        justify-content: space-between;
+        position: relative;
+
+        .avatar_input {
+            display: none;
+        }
+
+        .avatar {
+            cursor: pointer;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 96px;
+            width: 96px;
+            border-radius: 50%;
+        }
+        .icon {
+            position: absolute;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            background: rgb(255, 255, 255);
+            border: 1px solid rgb(208, 208, 211);
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 0px;
+            right: 4px;
+        }
+    }
+
+    // Phần sửa ID
+    .edit_id,
+    .edit_name,
+    .edit_bio {
+        display: flex;
+    }
+
+    .edit_id {
+        position: relative;
+    }
+    //Error fullname
+    .edit_name.error,
+    .edit_id.error {
+        .input_text {
+            outline: rgb(255, 76, 58) solid 1.5px;
+        }
+    }
+
+    .edit_bio {
+        padding: 16px 0;
+        .input_bio {
+            width: 360px;
+            border-radius: 4px;
+            background: rgba(22, 24, 35, 0.06);
+            caret-color: rgb(254, 44, 85);
+            font-size: 16px;
+            color: rgb(22, 24, 35);
+            line-height: 24px;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+            height: 100px;
+            padding: 12px;
+            resize: none;
+        }
+
+        .chars {
+            font-size: 1.4rem;
+
+            .quantity_chars {
+                margin-right: 2px;
+            }
+        }
+    }
+    .edit_bio.error {
+        .input_bio {
+            outline: rgb(255, 76, 58) solid 1.5px;
+        }
+
+        .quantity_chars {
+            color: rgb(255, 76, 58);
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    float: right;
+    padding: 14px 24px;
+    border-top: 0.5px solid rgba(22, 24, 35, 0.2);
+    justify-content: flex-end;
+}
+
+.modal-loading {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .spinner-loading {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 4px solid red;
+        border-right: 4px solid transparent;
+
+        animation: spinner 0.7s linear infinite;
+    }
+
+    .title {
+        color: red;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-top: 16px;
+    }
+}

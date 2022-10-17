@@ -1,0 +1,121 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+
+.container {
+    margin-left: 342px;
+
+    @include tablet {
+        margin-left: 8px;
+    }
+}
+//Header
+
+.header {
+    padding-top: 8px;
+    display: flex;
+    position: sticky;
+    z-index: 10;
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 0.5px;
+        background-color: rgba(22, 24, 35, 0.2);
+        width: 100%;
+        bottom: 0;
+        transform: scaleY(0.5);
+    }
+
+    .filter {
+        cursor: pointer;
+        width: 120px;
+        height: 42px;
+        font-size: 1.7rem;
+        font-weight: 600;
+        font-family: var(--font-family2);
+        color: rgba(22, 24, 35, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filter.active {
+        color: var(--black-color);
+    }
+
+    .outline {
+        width: 120px;
+        height: 2px;
+        background-color: var(--black-color);
+        position: absolute;
+        bottom: -1px;
+        transition: transform 0.3s;
+    }
+}
+
+//Phần content:
+
+//Phần accounts
+.accounts {
+    padding-top: 20px;
+    .accounts_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 8px;
+
+        .accounts_title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: rgba(22, 24, 35, 1);
+            font-family: var(--font-family2);
+        }
+
+        .accounts_more {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+
+            .accounts_more_icon {
+                font-size: 1.2rem;
+                margin-left: 4px;
+                transform: translateY(-0.5px);
+            }
+        }
+    }
+}
+
+//Phần video
+.videos {
+    padding-top: 12px;
+    .videos_header {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: rgba(22, 24, 35, 1);
+        font-family: var(--font-family2);
+    }
+
+    .videos_wrapper {
+        padding-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+
+    .videos_more {
+        margin-bottom: 60px;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+}
+
+//skeleton
+.skeleton-videos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}

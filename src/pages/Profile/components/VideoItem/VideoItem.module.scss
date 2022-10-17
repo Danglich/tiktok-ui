@@ -1,0 +1,45 @@
+.wrapper {
+    position: relative;
+    cursor: pointer;
+    width: 208px;
+
+    .likes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 32px;
+        left: 16px;
+        color: var(--white-color);
+        strong {
+            color: var(--white-color);
+            margin-left: 4px;
+        }
+    }
+}
+
+.video-wrap {
+    height: 258px;
+    width: 100%;
+    padding: 0 8px;
+    padding-top: 16px;
+    video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+.title {
+    display: block;
+    font-size: 1.7rem;
+    color: rgba(22, 24, 35, 1);
+    margin-top: 8px;
+    padding: 0 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}

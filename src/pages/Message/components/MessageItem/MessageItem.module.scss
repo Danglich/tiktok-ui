@@ -1,0 +1,118 @@
+.wrapper {
+    padding: 8px 24px;
+}
+
+.time {
+    text-align: center;
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.4rem;
+    margin: 8px 0;
+}
+
+.info {
+    display: flex;
+
+    &:hover .more {
+        display: flex;
+    }
+    .avatar {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .message {
+        overflow: hidden;
+        max-width: 360px;
+        padding: 7px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(22, 24, 35, 0.12);
+        background: transparent;
+        word-break: break-word;
+        white-space: pre-line;
+        margin: 0 0 0 8px;
+        font-family: 'IBM Plex Sans', ProximaNova, Arial, Tahoma, PingFangSC,
+            sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .more {
+        position: relative;
+        font-size: 2.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        z-index: 1;
+        display: none;
+        cursor: pointer;
+
+        &:hover .more_option {
+            display: block;
+        }
+
+        .more_option {
+            position: absolute;
+            top: 80%;
+            right: 0;
+            box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+            min-width: 120px;
+            padding: 12px;
+            background-color: var(--white-color);
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+
+            .delete,
+            .like {
+                font-weight: bold;
+                font-size: 1.6rem;
+                cursor: pointer;
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+.message_of_me .message {
+    margin: 0 8px 0 0;
+    background: rgba(22, 24, 35, 0.06);
+}
+.message_of_me .info {
+    flex-direction: row-reverse;
+}
+
+.like_wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 6px;
+    margin-left: 40px;
+
+    .like_icon {
+        height: 18px;
+    }
+    .img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 17px;
+        width: 17px;
+        border-radius: 50%;
+        margin-left: 6px;
+    }
+}
+
+.message_of_me .like_wrapper {
+    flex-direction: row-reverse;
+    margin-right: 40px;
+
+    .img {
+        margin-right: 6px;
+    }
+}

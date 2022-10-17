@@ -1,0 +1,69 @@
+.item {
+    width: 100%;
+    display: flex;
+    padding: 8px 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+}
+
+.item.only-avatar {
+    .info {
+        display: none;
+    }
+}
+
+.image {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    padding-left: 12px;
+}
+
+.username {
+    display: block;
+
+    .icon {
+        color: rgb(32, 213, 236);
+        padding-left: 8px;
+        font-size: 1.5rem;
+    }
+
+    span {
+        font-size: 1.6rem;
+        font-family: var(--font-family2);
+        line-height: 2.2rem;
+        font-weight: 600;
+        color: var(--black-color);
+    }
+}
+
+.name {
+    display: block;
+
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+//Phần cho size small
+.small {
+    .image {
+        height: 32px;
+        width: 32px;
+    }
+    .name {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+}
+
+.small.item {
+    padding: 6px 8px;
+}

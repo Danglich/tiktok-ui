@@ -1,0 +1,107 @@
+.container {
+    background-color: #f8f8f8;
+    margin-top: var(--default-layout-header-height);
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 1100px;
+    background-color: var(--white-color);
+    padding: 24px 56px;
+    margin: 16px 0;
+    border-radius: 12px;
+    padding-bottom: 120px;
+}
+.header {
+    .header-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .header-sub-title {
+        font-size: 1.8rem;
+        color: var(--gray-color);
+        font-weight: 400;
+    }
+}
+
+.body {
+    display: flex;
+    padding-top: 24px;
+    flex-wrap: wrap;
+
+    .input-file {
+        display: none;
+    }
+}
+
+.options {
+    flex: 1;
+    label {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+
+    .description {
+        position: relative;
+
+        .description-input {
+            outline: none;
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 4px 8px;
+            padding-right: 34px;
+        }
+
+        .emoji-container {
+            position: absolute;
+            right: 8px;
+            top: 43px;
+        }
+    }
+
+    .regime {
+        margin-top: 16px;
+        .regime-select {
+            width: 200px;
+            font-size: 1.8rem;
+            padding: 4px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    .allow-comment {
+        margin-top: 16px;
+        .allow-comment-btn {
+            accent-color: var(--primary-color);
+        }
+        .allow-comment-title {
+            display: inline-block;
+            margin-left: 4px;
+            font-size: 1.6rem;
+        }
+    }
+
+    .btn {
+        display: flex;
+        margin-top: 20px;
+
+        .disabled {
+            background-color: rgb(242, 242, 242);
+            color: rgba(22, 24, 35, 0.34);
+
+            &:hover {
+                background-color: rgb(242, 242, 242);
+                cursor: no-drop;
+            }
+        }
+    }
+}
+
+.link-profile {
+    line-height: 32px;
+}

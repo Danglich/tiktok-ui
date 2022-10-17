@@ -1,0 +1,36 @@
+.wrapper {
+    position: relative;
+    width: 710px;
+    float: right;
+}
+
+.wrapper--has-video {
+    position: relative;
+    padding: 6px 12px;
+    width: 692px;
+    float: right;
+
+    .loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16px 0;
+    }
+}
+
+//Phần tài khoản đề suất
+
+.urer_suggest--container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    padding-top: 42px;
+
+    .user_suggest--item {
+        height: 304px;
+
+        width: 33.3333%;
+        padding: 0 8px;
+        margin-bottom: 20px;
+    }
+}

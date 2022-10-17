@@ -1,0 +1,132 @@
+@import 'normalize.css';
+
+:root {
+    --font-family: 'ProximaNova', serif;
+    --font-family2: 'SofiaPro', serif;
+    --primary-color: rgba(254, 44, 85, 1);
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
+    --navbar-width: 356px;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: rgba(22, 24, 35, 0.5);
+}
+
+@mixin tablet {
+    @media (max-width: 1071px) {
+        @content;
+    }
+}
+
+.Toastify__toast-container {
+    z-index: 1000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+body {
+    overflow-y: overlay;
+    font-size: 16px;
+    font-family: var(--font-family);
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: rgba(22, 24, 35, 1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+input,
+button,
+a {
+    outline: none;
+    border: none;
+}
+
+button,
+a {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a[href] {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+//Phần fonts
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/sofiapro-bold.woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/sofiapro-semibold.otf');
+    font-weight: 600;
+}
+//Phần Tippy
+
+body {
+    .tippy-content {
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 8px;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-box {
+        border-radius: 8px;
+    }
+}

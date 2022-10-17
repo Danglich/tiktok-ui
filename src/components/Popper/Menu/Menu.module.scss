@@ -1,0 +1,52 @@
+//Phần cho Menu-list
+.menu-list-wrap {
+    padding: 8px 0;
+}
+
+.header {
+    position: relative;
+    height: 50px;
+}
+
+.back-btn {
+    font-size: 1.8rem;
+    height: 50px;
+    width: 50px;
+}
+
+.header-title {
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.8rem;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+}
+
+.menu-body {
+    max-height: 580px;
+    overflow-y: auto;
+
+    //Phần cho Menu-item
+    .menu-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 11px 12px;
+        border-radius: 0;
+
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+        svg {
+            width: 22px;
+        }
+    }
+}
+
+.seperate {
+    position: relative;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}

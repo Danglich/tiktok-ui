@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 12px;
+}
+
+.title {
+    user-select: none;
+    font-size: 1.7rem;
+
+    color: #333;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--header-search-width);
+    height: var(--header-search-height);
+    background-color: rgba(22, 24, 35, 0.06);
+    padding-left: 16px;
+    border-radius: var(--header-search-border-radius);
+    border: 1.5px solid transparent;
+
+    input {
+        flex: 1;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        caret-color: var(--primary-color);
+        background-color: transparent;
+        font-family: var(--font-family);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 28px;
+        width: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+        position: absolute;
+        right: 52px;
+    }
+
+    &:focus-within {
+        border: 1.5px solid rgba(22, 24, 35, 0.2);
+    }
+}
+
+.search-input {
+    user-select: none;
+}
+
+.search-input:not(:placeholder-shown) ~ .search-btn {
+    color: var(--black-color);
+}
+
+.search-result {
+    width: 362px;
+}
+
+.search-btn {
+    color: rgba(22, 24, 35, 0.34);
+    font-size: 2rem;
+    height: 100%;
+    width: 52px;
+    border-top-right-radius: var(--header-search-border-radius);
+    border-bottom-right-radius: var(--header-search-border-radius);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.clear,
+.loadding {
+    position: absolute;
+    font-size: 1.6rem;
+    color: rgba(22, 24, 35, 0.34);
+    right: 62px;
+}
+
+.loadding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,47 @@
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+
+.content {
+    width: 310px;
+    padding-top: 24px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    text-align: center;
+
+    .title {
+        display: block;
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    .sub-title {
+        display: block;
+        font-size: 1.5rem;
+        padding: 4px 26px 20px 26px;
+        color: rgba(22, 24, 35, 0.5);
+    }
+
+    .cancel-btn {
+        width: 100%;
+        padding: 20px 0;
+        color: var(--primary-color);
+        font-size: 1.6rem;
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
+    .continue-btn {
+        width: 100%;
+        padding: 20px 0;
+        font-size: 1.6rem;
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+}

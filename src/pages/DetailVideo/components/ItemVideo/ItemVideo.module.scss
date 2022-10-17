@@ -1,0 +1,99 @@
+//Skeleton video
+.box-load {
+    position: absolute;
+    background-color: rgb(230, 229, 229);
+    height: 204px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1000;
+
+    .load {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        background-color: rgb(218, 218, 218);
+        width: 16px;
+        opacity: 0.2;
+        animation: run 1s ease-out infinite;
+        rotate: 30deg;
+        top: -91px;
+        height: 370px;
+    }
+}
+
+@keyframes run {
+    to {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .video_wrapper {
+        position: relative;
+
+        .skeleton-video {
+            border-radius: 4px;
+        }
+        video {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+
+            height: 202px;
+        }
+
+        .duration_wrapper {
+            position: absolute;
+            font-size: 1.3rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--white-color);
+            bottom: 12px;
+            height: 18px;
+            right: 6px;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+    }
+
+    .info {
+        .title {
+            display: block;
+            font-family: var(--font-family2);
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .nickname {
+            font-size: 1.5rem;
+            display: block;
+            color: rgba(22, 24, 35, 0.75);
+        }
+
+        .time {
+            font-size: 1.5rem;
+            color: rgba(22, 24, 35, 0.75);
+            margin-right: 8px;
+        }
+
+        .likes_wrapper {
+            display: inline-block;
+            font-size: 1.4rem;
+            color: rgba(22, 24, 35, 0.75);
+
+            .likes_count {
+                margin-left: 3px;
+            }
+        }
+    }
+}

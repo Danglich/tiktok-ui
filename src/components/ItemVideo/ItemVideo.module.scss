@@ -1,0 +1,289 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-bottom: 24px;
+    padding-top: 24px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+}
+
+//Skeleton video
+.box-load {
+    position: absolute;
+    //background-color: rgb(230, 229, 229);
+    background-color: #d5d2d2;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 292px;
+    z-index: 1;
+    height: 516px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .load {
+        position: absolute;
+        height: 100%;
+        left: -76px;
+        background-color: rgb(211 207 207);
+        width: 28px;
+        opacity: 0.2;
+        animation: run 1s ease-out infinite;
+        rotate: 30deg;
+        top: -145px;
+        height: 567px;
+    }
+}
+
+@keyframes run {
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+//avartar
+.avatar {
+    cursor: pointer;
+    width: 56px;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+//content:
+.content {
+    padding-left: 12px;
+}
+
+.info {
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    width: 610px;
+
+    .btn-follow {
+        margin-top: 20px;
+        margin-left: 30px;
+        height: 30px;
+        min-height: 30px;
+        min-width: 102px;
+    }
+}
+
+.username {
+    font-weight: 700;
+    font-family: 'SofiaPro';
+    font-size: 2.1rem;
+    color: var(--black-color);
+    margin-right: 4px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.author {
+    font-size: 1.6rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.title {
+    display: block;
+}
+
+.body {
+    height: 518px;
+    display: flex;
+}
+
+.wrapper-item {
+    width: 290px;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+
+    .link_video {
+        display: block;
+    }
+
+    video {
+        border-radius: 8px;
+        height: 515px;
+        object-fit: cover;
+
+        width: 100%;
+    }
+
+    &:hover {
+        .report,
+        .control,
+        .control-volume {
+            display: block;
+        }
+    }
+
+    .report,
+    .control,
+    .control-volume {
+        display: none;
+        position: absolute;
+        color: var(--white-color);
+        cursor: pointer;
+        animation: fadeIn 0.2s linear;
+        z-index: 2;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .report {
+        font-weight: 700;
+        top: 24px;
+        right: 16px;
+
+        svg {
+            margin-right: 4px;
+        }
+    }
+
+    .control {
+        font-size: 2rem;
+        bottom: 40px;
+        left: 26px;
+    }
+
+    .control-volume {
+        text-align: center;
+        bottom: 36px;
+        right: 26px;
+
+        .volume-icon {
+            font-size: 2rem;
+            height: 24px;
+            width: 24px;
+            margin-top: 8px;
+            color: var(--white-color);
+
+            .volume-icon-mute {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+}
+
+// thanhh thời gian
+.control-time {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    display: none;
+
+    .crossbar-time {
+        flex: 1;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #ccc;
+        bottom: 18px;
+        margin-right: 8px;
+
+        .crossbar-time-current {
+            background-color: var(--white-color);
+        }
+    }
+
+    .time {
+        color: var(--white-color);
+        font-size: 1.1rem;
+        font-family: ProximaNova;
+    }
+}
+
+//Phần âm thanhh
+.volume-wrapper {
+    display: none;
+    width: 24px;
+    height: 64px;
+    position: relative;
+    cursor: initial;
+    background: rgba(22, 24, 35, 0.34);
+    border-radius: 32px;
+
+    .volume-total {
+        width: 2px;
+        height: 48px;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 11px;
+        top: 8px;
+        bottom: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        z-index: 2;
+    }
+
+    .volume-circle {
+        width: 12px;
+        height: 12px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        position: absolute;
+        left: 6px;
+        bottom: 8px;
+        cursor: pointer;
+        z-index: 8;
+
+        transform: translateY(-39px);
+    }
+
+    .volume-current {
+        width: 2px;
+        height: 48px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        left: 11px;
+        bottom: 8px;
+        cursor: pointer;
+        transform-origin: center bottom;
+        border-radius: 4px;
+
+        transform: scaleY(1);
+    }
+}
+
+.control-volume:hover .volume-wrapper {
+    display: block;
+}

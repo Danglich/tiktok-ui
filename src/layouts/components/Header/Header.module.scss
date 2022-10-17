@@ -1,0 +1,86 @@
+@import '../../../components/GlobalStyle/GlobalStyle.scss';
+
+:root {
+    --header-search-height: 46px;
+    --header-search-width: 362px;
+    --header-search-border-radius: 92px;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    height: var(--default-layout-header-height, 60px);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+.content {
+    height: 100%;
+    width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    justify-content: space-between;
+
+    @include tablet {
+        width: 100%;
+    }
+}
+
+.content.full-width {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.action {
+    display: flex;
+}
+
+.more {
+    font-size: 1.9rem;
+    background-color: transparent;
+    padding: 0 8px;
+    margin-left: 16px;
+}
+
+//Phần có User
+.user-action {
+    font-size: 2rem;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+    &:first-child {
+        margin-left: 8px;
+    }
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    object-fit: cover;
+}
+
+.admin-link {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    border: 1px solid #cac8c8;
+    border-radius: 4px;
+}

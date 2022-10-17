@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-family: var(--font-family);
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    color: var(--black-color);
+    user-select: none;
+}
+
+.wrapper + button {
+    margin-left: 16px;
+}
+
+.title + .icon {
+    margin-left: 8px;
+}
+.icon + .title {
+    margin-left: 8px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+//Type của Button
+
+.primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            ),
+            #fe2c55;
+    }
+}
+
+.outline {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.round {
+    border-radius: 24px;
+}
+.borderDefault {
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        background-color: #f8f8f8;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: no-drop;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+//Size của Buttons
+.large {
+    min-height: 48px;
+    min-width: 168px;
+    font-size: 1.8rem;
+}
+.medium {
+    min-width: 100px;
+    min-height: 36px;
+}
+
+.small {
+    min-height: 28px;
+    min-width: 100px;
+}
+
+//Font Buttons
+.thin {
+    font-weight: 600;
+}
+
+.thick {
+    font-weight: 700;
+}

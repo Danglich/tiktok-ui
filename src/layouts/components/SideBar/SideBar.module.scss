@@ -1,0 +1,264 @@
+@import '../../../components/GlobalStyle/GlobalStyle.scss';
+
+.content {
+    width: calc(var(--navbar-width) - 10px);
+    margin-left: -13px;
+    display: flex;
+    position: fixed;
+
+    .body-tablet {
+        display: none;
+    }
+}
+
+//Resp
+
+.content,
+.content.small {
+    @include tablet {
+        margin: 0;
+        width: 72px;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid rgba(22, 24, 35, 0.12);
+        box-shadow: 0px 2px 8px rgb(0 0 0 / 6%);
+        height: 100vh;
+        left: 0;
+
+        .body-tablet {
+            display: flex;
+            padding: 16px 8px;
+            flex-direction: column;
+            align-items: center;
+
+            .top-container {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 6px;
+
+                .top-item {
+                    cursor: pointer;
+                    padding: 5px 14px;
+                    border-radius: 4px;
+
+                    &.active {
+                        color: var(--primary-color);
+                        background: rgba(22, 24, 35, 0.03);
+                    }
+
+                    &:hover {
+                        background: rgba(22, 24, 35, 0.03);
+                    }
+                }
+            }
+
+            .user-container {
+                padding-top: 16px;
+                border-top: 1px solid rgba(22, 24, 35, 0.12);
+            }
+        }
+    }
+}
+
+.content.small {
+    width: 232px;
+
+    .body-tablet {
+        display: none;
+    }
+
+    @include tablet {
+        width: 72px;
+        .body-tablet {
+            display: flex;
+        }
+    }
+}
+
+.scrollbar {
+    width: 10px;
+    @include tablet {
+        display: none;
+    }
+
+    .track {
+        width: 6px;
+        display: none;
+        height: 200px;
+        background-color: rgb(0, 0, 0, 0.08);
+        border-radius: 12px;
+        animation: fadeIn 0.5s linear;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.body:hover ~ .scrollbar .track {
+    display: block;
+}
+
+.body {
+    overflow-y: auto;
+    max-height: 100vh;
+    &::-webkit-scrollbar {
+        border-radius: 0;
+        width: 0;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94%;
+        height: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+}
+
+.controller-wraper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 6px;
+
+    .controller-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+        padding: 7px;
+        margin-left: 0;
+        font-size: 2rem;
+        font-family: var(--font-family2);
+
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.controller-icon {
+    margin-right: 2px;
+}
+
+//Phần Login
+
+.login {
+    padding: 24px 12px;
+
+    .title {
+        margin-bottom: 16px;
+        display: block;
+        padding-top: 0;
+        font-size: 1.6rem;
+        color: rgba(22, 24, 35, 0.5);
+    }
+}
+
+//Phần tài khoản được đề suất và đang follow
+.accounts-suggest,
+.accounts-following {
+    padding-bottom: 8px;
+    .nofollowing-title {
+        color: rgba(22, 24, 35, 0.5);
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 20px;
+        padding: 0px 6px;
+    }
+}
+
+.account-suggest-item {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.title {
+    padding-top: 16px;
+    padding-left: 4px;
+    padding-bottom: 8px;
+    font-size: 1.6rem;
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.account-suggest-more,
+.account-following-more {
+    color: var(--primary-color);
+    padding-left: 7px;
+}
+
+//Phần khám phá
+.explore {
+    padding-bottom: 16px;
+}
+
+.explore-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hashtag {
+    align-items: center;
+    color: rgba(22, 24, 35, 0.75);
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    display: flex;
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+}
+
+.hashtag-name {
+    font-size: 1.5rem;
+    padding-left: 2px;
+}
+
+//Phần footer
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .container-links {
+        font-size: 1.6rem;
+    }
+}
+
+.footer-link {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 1.3rem;
+    color: rgba(22, 24, 35, 0.6);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer-title {
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.6);
+}

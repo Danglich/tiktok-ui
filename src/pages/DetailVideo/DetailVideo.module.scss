@@ -1,0 +1,276 @@
+@import '../../components/GlobalStyle/GlobalStyle.scss';
+
+.header {
+    cursor: pointer;
+    height: 48px;
+    font-size: 1.7rem;
+    margin-bottom: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'IBM Plex Sans', SofiaPro, Arial, Tahoma, PingFangSC,
+        sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.body {
+    display: flex;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 2.8;
+        border-top: 1px solid #f1f1f1;
+        padding-top: 6px;
+        padding-bottom: 16px;
+
+        @include tablet {
+            gap: 16px;
+        }
+    }
+}
+
+//Phần content
+.video_info {
+    padding-bottom: 18px;
+
+    .video_wrapper {
+        position: relative;
+        border-radius: 4px;
+        background-color: rgb(45, 44, 44);
+        //height: 606px;
+        display: flex;
+        justify-content: center;
+        background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhUQEBIVFRUVFxUWFRUVFRUVFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIASwAqAMBIgACEQEDEQH/xAAaAAEBAQEAAwAAAAAAAAAAAAAAAQIDBAUH/8QALxABAQABAgMHAwQCAwEAAAAAAAERAiExQVEDEmFxgZHwobHBBCLR4RPxIzJiBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD4qAABALQQFJ5499vYABe7wzLi7zbjM2ZnXeWelJjHjnjnbG3LHnvkERaWcwXVqzc7TPTaek5Iigs1XFnXGeHLON/VAwCKAI6fqO53r/juq6M/tuuSasf+pLZL6ppxvnPDbEl38c8JxZAAAJAnj88gBFAAAF+Y9/690nzw+fkAAAAF0Tf746Te/RKAAAIoAUABFAAAXM9ev9e/uguZi7dMXp6e3sCAAAYAAAs+Zl/15EgAIoAFi6rm24kzbcTaTPKeAIACKGAb7fsdejVdGvTdOqYzp1SyzMlm16yy+qs9r2l1arq1XNttt623NoDIAAAALp05sk4375BMbZ+bf7gigigC6sZuJicpnOJ0zzRdeM3u5xm4lubjO2bJM30QAFs+fyCBkAAyAssxdumLnhxztzzt7JJnYAGu0st/bMTE2znfElufG5vhnADIAAAEXVJvi532uMZnXwQAAAMgDXaaLpuNUsuJcWWXFksu/WWX1ZABbEAAAAAAAW36fXe3N98ekDTjn9Ljy5AICyAgAAAALfn5BBcAIKAgKCGBQQFs+vD7be19gQAAAF06bbJJbbtJN7beEkML2evFziXazeSzeWcLz326XCAgAAoCKjWvRZbLj0s1T3lwCIoBn+0UAMc11TFxeXzigAACKAQAEFAEUwBgz8+v4i2cN/TfM80A03H98F1acbbXhwsvGZ4xAF0/OSAAC4BBQEoq4mOO+eGNsY45z9MAyKgKacZmc45444548QBBZPTx6eOyUDAqABQAVACCghhSzxl8Zn8gB857rZz+viCBQC+HzqAACAoAAACKAWI3quLf3ZxtnfFkndmM74xwzJsyC69OLjMvDecOGWVvzwARQAAwAtk5fIgALbdp04JABrtJJbNNtmbJbO7bM7WzNxmcmQAAAq69WbbiTNtxNpM8pOUBAAAADAAAAAAWr3riyW4uMzO1xwzOeEAAUEFoCC2AIC4BBQEFAQWAIKAg3r7u2M8JnOP+3PGOXBkEUARQAMDWjs+9cTHO/u1adM2lu+rVZOE9QZwAACybZ9PfP8UELpxcWYs2su1lnGWDWrVm23n/ADnYGQAXPL14TPLnxxtw8+qAAADWnVjO0uZjebzeXM6XbHlb1ZXPIBCCgjp2PbatFzpxwuneSyzVMXMu1/FkvGME+eG/Hx2z7gkWTxx77+G3zYARceefxgAEUAnkZ5fPm99xdcm2LbtvmYxecm9zOG+3kCAAfPn0DPLz28bx+09oAB8/j8lAAAGpfrtwl8ds8OHGePVAQqoAKgAoCCgIKAigAjWUAAAMgCKKAjQCAAg0gIK1cYm1zvm52s2xiY2575uczaY3DA3Lx2m+2bOll2vK7T0t6sgcuHTf582FQBFwuAQABbjkymQaKSs5BciANrqxyz6+W/1UkBkXACCpQLtslpdTOQXvLKzamQdBiV07TtrqudWM7cJNM2kk20yThICJk1VPmAWsZMpkGhkoKuWSUFCAO5hWZq4wFMM5JQNdY73RrtIwCFWJYBazkSguRCA3KmWVBUyLdIJgyUBYSGEBqjMoDrNXI13/AGyagO8d5mLq124zymJ4TN1ffVfcFymWQFyuWYSgSCRqQGbUytm6Asa722Ds9GclgJp4ulsx5buU6tXqCWmSFBMlRQQKA6aVTTOCUEtXKUwCLhJdns//ALX6DR2X+DuW/wDJ+n7LtdWbn9+vvZxtw2gPWZShjaAsrfe2c4WgtS8EhQbldtE9XDS8rROd8PsDh2m12Yd/1GmZ9/s8fSCytarlMbZZApKlIC4BAf/Z');
+
+        &:hover {
+            .circle {
+                opacity: 1;
+            }
+
+            .time_controll {
+                transform: scaleY(1.8);
+                transform-origin: bottom right;
+            }
+        }
+
+        .video-unload {
+            width: 100%;
+            position: absolute;
+            height: 600px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        video {
+            width: 40%;
+            object-fit: cover;
+            height: 600px;
+        }
+
+        .play_icon--large {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            color: #fff;
+            font-size: 5.7rem;
+        }
+
+        .time {
+            position: absolute;
+            left: 22px;
+            bottom: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+
+            .play_icon--small {
+                color: #fff;
+                font-size: 2.2rem;
+                padding-right: 10px;
+                width: 24px;
+            }
+        }
+
+        .volume {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .time_controll {
+            position: absolute;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            //overflow: hidden;
+
+            .current_time {
+                height: 100%;
+                width: 0px;
+                background-color: var(--primary-color);
+                border-bottom-left-radius: 4px;
+            }
+        }
+
+        .circle {
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: var(--white-color);
+            box-shadow: 0px 0px 3px rgb(22 24 35);
+            z-index: 10;
+            transform: translate(-3px, 2px);
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    .video_title {
+        font-size: 1.7rem;
+        margin-top: 16px;
+        display: block;
+    }
+}
+
+//Phần user
+.user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+    padding: 16px 0;
+    .avatar {
+        height: 40px;
+        width: 40px;
+        margin-right: 12px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover ~ .info > .nickname {
+            text-decoration: underline;
+        }
+    }
+
+    .info {
+        cursor: pointer;
+
+        &:hover > .nickname {
+            text-decoration: underline;
+        }
+        .nickname {
+            display: block;
+            font-family: var(--font-family2);
+            font-weight: 700;
+            font-size: 1.9rem;
+        }
+    }
+
+    .btn_follow {
+        margin-left: 20px;
+    }
+}
+
+//Phần comment
+
+.comment {
+    .header {
+        .total_comments {
+            margin-right: 4px;
+        }
+    }
+
+    .input_wrapper {
+        padding-bottom: 24px;
+    }
+
+    .login_wrapper {
+        display: flex;
+        padding-bottom: 24px;
+
+        .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+            height: 48px;
+            width: 48px;
+        }
+
+        .btn_login {
+            cursor: pointer;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: bold;
+            background-color: rgb(248, 248, 248);
+            flex: 1;
+            border-radius: 2px;
+            margin-left: 16px;
+            padding: 0 12px;
+        }
+    }
+}
+//Phần video gợi ý
+
+.suggest {
+    flex: 1;
+    padding-left: 22px;
+    margin-right: -18px;
+
+    @include tablet {
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+
+        .loading-video-suggest {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video_item--wrapper {
+            cursor: pointer;
+            width: 46%;
+            margin-top: 16px;
+
+            @include tablet {
+                width: 148px;
+            }
+        }
+    }
+}

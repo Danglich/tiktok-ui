@@ -1,0 +1,55 @@
+.container {
+    
+    border-radius: 50%;
+    background-color: #f1f1f2;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .heart_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
+.container.active {
+    .heart_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        animation: heart 0.4s linear;
+    }
+    
+}
+
+.container.medium {
+    width: 48px;
+    height: 48px;
+}
+
+.container.small {
+    width: 32px;
+    height: 32px;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(0.8);
+    }
+    25% {
+        transform: scale(1.6);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,166 @@
+.wrapper {
+    display: flex;
+    padding-top: 12px;
+    &:hover .more {
+        display: block;
+    }
+
+    .avatar {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover ~ .box_right .nickname {
+            text-decoration: underline;
+        }
+    }
+
+    .avatar.subcomment {
+        height: 24px;
+        width: 24px;
+    }
+
+    .box_right {
+        padding-left: 13px;
+        flex: 1;
+        .fullname {
+            font-family: 'IBM Plex Sans', SofiaPro, Arial, Tahoma, PingFangSC,
+                sans-serif;
+            font-weight: 700;
+            font-size: 2.1rem;
+            line-height: 21px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .author {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.7rem;
+            margin-left: 4px;
+        }
+
+        .comment {
+            font-size: 1.7rem;
+            display: block;
+        }
+
+        .sub_info {
+            display: flex;
+            padding-top: 5px;
+
+            .time {
+                color: rgba(22, 24, 35, 0.5);
+                font-size: 1.5rem;
+                line-height: 20px;
+            }
+
+            .likes {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 16px;
+                cursor: pointer;
+
+                .likes_count {
+                    margin-left: 4px;
+                }
+            }
+
+            .rep {
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .more {
+        font-size: 2rem;
+        padding: 0 8px;
+        cursor: pointer;
+        position: relative;
+        display: none;
+
+        &:hover .option {
+            display: block;
+        }
+
+        .option {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            background: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+            min-width: 140px;
+            right: -8px;
+            padding: 12px;
+            padding-left: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+
+.container {
+    .view_more {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: rgba(22, 24, 35, 0.5);
+        padding-top: 8px;
+        cursor: pointer;
+        margin-left: 52px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        span {
+            padding: 0 4px;
+        }
+
+        svg {
+            margin-left: 4px;
+            font-size: 1.4rem;
+        }
+    }
+
+    .subcomments {
+        display: none;
+        margin-left: 52px;
+    }
+
+    .hide {
+        display: flex;
+        justify-content: center;
+        padding: 8px 0;
+        color: var(--primary-color);
+        cursor: pointer;
+        display: none;
+    }
+}
+
+.container.open_view_more {
+    .view_more {
+        display: none;
+    }
+
+    .subcomments {
+        display: block;
+    }
+
+    .hide {
+        display: flex;
+    }
+}

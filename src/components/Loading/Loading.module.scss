@@ -1,0 +1,18 @@
+.wrapper {
+    height: 52px;
+    width: 52px;
+    background-color: transparent;
+    border: 3px solid #000;
+    border-radius: 50px;
+    border-right: 2px solid transparent;
+    animation: loading 0.6s infinite linear;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

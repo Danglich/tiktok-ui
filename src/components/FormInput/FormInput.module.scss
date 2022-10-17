@@ -1,0 +1,32 @@
+.form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 18px;
+
+    input {
+        border: 1px solid rgba(22, 24, 35, 0.12);
+        font-size: 1.6rem;
+        padding: 12px;
+        width: 100%;
+        border-radius: 5px;
+        caret-color: var(--primary-color);
+    }
+
+    span {
+        color: red;
+        font-size: 1.5rem;
+        padding-top: 5px;
+        display: none;
+    }
+}
+
+input:invalid[focused='true'] ~ span {
+    display: block;
+}
+
+label {
+    font-size: 1.9rem;
+    padding-bottom: 4px;
+    font-weight: bold;
+}

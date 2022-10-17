@@ -1,0 +1,209 @@
+.user {
+    max-width: 624px;
+    position: relative;
+}
+
+//header
+.info {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    .avatar {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sub-info {
+        padding-left: 20px;
+        .nickname {
+            display: block;
+            font-family: var(--font-family2);
+            font-size: 3.3rem;
+            font-weight: 700;
+        }
+        .fullname {
+            font-size: 1.9rem;
+            font-weight: 700;
+        }
+
+        .follow-btn {
+            width: 208px;
+            margin-top: 8px;
+            font-size: 1.7rem;
+        }
+    }
+}
+
+//Quantity
+
+.quantity {
+    margin-top: 28px;
+    display: flex;
+    strong {
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family: var(--font-family2);
+        color: rgba(18, 18, 18, 0.75);
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-left: 6px;
+    }
+
+    .follower,
+    .likes {
+        margin-left: 12px;
+    }
+}
+
+.bio {
+    font-size: 1.7rem;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+// Phần actions
+.action {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    .share,
+    .more {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+    }
+}
+
+//Phần videos
+
+.body {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    .control {
+        position: relative;
+        font-size: 1.9rem;
+        font-weight: 700;
+        display: flex;
+        margin-bottom: 16px;
+
+        &::after {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            content: '';
+            width: 460px;
+            height: 0.5px;
+            background-color: rgba(22, 24, 35, 0.2);
+        }
+
+        .outline-btn {
+            position: absolute;
+            display: block;
+            bottom: -1px;
+            content: '';
+            width: 230px;
+            height: 2px;
+            background-color: var(--black-color);
+            transition: transform 0.3s;
+            transform: translateX(0);
+        }
+
+        .wrap-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(18, 18, 18, 0.5);
+            width: 230px;
+            height: 44px;
+            cursor: pointer;
+        }
+
+        .wrap-block.active {
+            color: var(--black-color);
+        }
+    }
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    margin-right: -36px;
+}
+
+//Phần video đã thích
+.videos_liked {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    margin-right: -36px;
+    //Private
+}
+
+//phần btn của user đã follow
+.followed {
+    display: flex;
+    padding-top: 8px;
+
+    .message_btn {
+        padding: 0 48px;
+        font-size: 1.7rem;
+        margin-right: 8px;
+    }
+
+    .unfollow_icon--wrapper {
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(22, 24, 35, 0.12);
+        border-radius: 4px;
+    }
+}
+
+//Không có user
+
+.no_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 74vh;
+
+    .no_user--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 44px;
+        opacity: 0.3;
+    }
+
+    .no_user--title {
+        font-size: 2.6rem;
+        font-family: var(--font-family2);
+        font-weight: 700;
+        display: block;
+        text-align: center;
+    }
+
+    .no_user--subtitle {
+        margin-top: 8px;
+        display: block;
+        text-align: center;
+    }
+}

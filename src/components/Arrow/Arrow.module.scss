@@ -1,0 +1,11 @@
+.wrapper {
+    width: 0;
+    height: 0;
+    border: 12px solid var(--white-color);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    top: -20px;
+    right: 14px;
+}
