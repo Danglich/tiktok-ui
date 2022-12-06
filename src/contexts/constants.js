@@ -7,7 +7,7 @@ export const LOCAL_STORAGE_TOKEN_NAME = 'token';
 
 export const domain = `https://tiktok-danglichhh.netlify.app`;
 
-//export const adminUrl = `https://tiktok-admin-danglich.netlify.app`;
+export const adminUrl = `https://tiktok-admin-danglichhh.netlify.app`;
 
 //https://serene-bayou-18858.herokuapp.com
 
