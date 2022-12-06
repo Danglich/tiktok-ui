@@ -155,7 +155,10 @@ function Header({ fullWidth = false }) {
                                 </button>
                             </Tippy>
                             {user?.roleId === 1 && (
-                                <a href={adminUrl} className={cx('admin-link')}>
+                                <a
+                                    href={adminUrl || ''}
+                                    className={cx('admin-link')}
+                                >
                                     Admin
                                 </a>
                             )}
